@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-area: 
+    
+    "bannerInicial"
+    "segundoMenuInfo"
+    "galeriaFotos"
+    "peronsalEmpresa"
+    "fraseMotivadora"
+    "download-seccion"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "bannerInicial"
+    "segundoMenuInfo"
+    "galeriaFotos"
+    "peronsalEmpresa"
+    "fraseMotivadora"
+    "download-seccion"
+    "footer"
+    ;
+}
+.bannerInicial {
+    grid-area: bannerInicial;
+    background-color: #2A2E49;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 40px 350px;
+}
+.menu-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo menu";
+    padding: 0 0 20px 0;
+}
+.menu-inicio .logo {
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    grid-area: logo;
+    
+}
+.menu-inicio .menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu-inicio .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+}
+
+.menu-inicio .menu ul li {
+    margin-left: 20px;
+}
+.menu-inicio .menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: x;
+}
+
+.texto-banner-inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 0 100px 0;
+}
+
+.texto-banner-inicial h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    width: 1000px;
+    align-items: center;
+    padding: 80px 0 0 0;
+}
+
+.texto-banner-inicial p {
+    font-size: 25px;
+    font-family: x;
+    text-align: center;
+    padding: 0 0 50px 0;
+    width: 900px;
+}
+
+.texto-banner-inicial button {
+    background-color: #E84546;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+.segundoMenuInfo {
+    grid-area: segundoMenuInfo;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    padding: 50px 350px;
+}
+
+.info-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.info-2 .imagen-info2 {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.info-2 h1 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.info-2 p {
+    font-size: 14px;
+    color: #555;
+    width: 300px;
+}
+
+.galeriaFotos {
+    grid-area: galeriaFotos;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 0
+}
+.galeriaFotos .foto1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.peronsalEmpresa {
+    grid-area: peronsalEmpresa;
+}
+
+
+
+
+.fraseMotivadora {
+    grid-area: fraseMotivadora;
+}
