@@ -3,29 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: grid;
-    grid-area: 
-    
-    "bannerInicial"
-    "segundoMenuInfo"
-    "galeriaFotos"
-    "peronsalEmpresa"
-    "fraseMotivadora"
-    "download-seccion"
-    "footer"
-    ;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "bannerInicial"
-    "segundoMenuInfo"
-    "galeriaFotos"
-    "peronsalEmpresa"
-    "fraseMotivadora"
-    "download-seccion"
-    "footer"
-    ;
+    grid-template-areas:
+        "bannerInicial"
+        "segundoMenuInfo"
+        "galeriaFotos"
+        "peronsalEmpresa"
+        "fraseMotivadora"
+        "download-seccion"
+        "footer";
+    font-family: 'Raleway', sans-serif;
 }
+
+/* =============================================
+   BANNER INICIAL
+============================================= */
 .bannerInicial {
     grid-area: bannerInicial;
     background-color: #2A2E49;
@@ -35,26 +30,28 @@ body {
     height: auto;
     padding: 40px 350px;
 }
+
 .menu-inicio {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "logo menu";
+    grid-template-areas: "logo menu";
     padding: 0 0 20px 0;
 }
+
 .menu-inicio .logo {
     width: 100px;
     display: flex;
     justify-content: flex-start;
     grid-area: logo;
-    
 }
+
 .menu-inicio .menu {
     grid-area: menu;
     display: flex;
     justify-content: flex-start;
 }
+
 .menu-inicio .menu ul {
     display: flex;
     flex-direction: row;
@@ -63,23 +60,28 @@ body {
     width: 100%;
     list-style: none;
     padding: 0;
-
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #fff;
-    margin: 20px 0;
 }
 
 .menu-inicio .menu ul li {
     margin-left: 20px;
 }
+
 .menu-inicio .menu ul li a {
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.menu-inicio .menu ul li a:hover {
     color: #fff;
-    font-size: 14px;
-    font-family: x;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
 }
 
 .texto-banner-inicial {
@@ -99,34 +101,45 @@ hr {
     width: 1000px;
     align-items: center;
     padding: 80px 0 0 0;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .texto-banner-inicial p {
-    font-size: 25px;
-    font-family: x;
+    font-size: 18px;
     text-align: center;
     padding: 0 0 50px 0;
-    width: 900px;
+    width: 700px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
 }
 
 .texto-banner-inicial button {
     background-color: #E84546;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 40px;
+    font-size: 13px;
+    font-weight: 700;
     cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
 }
 
+.texto-banner-inicial button:hover {
+    background-color: #c93535;
+}
 
-
-
+/* =============================================
+   FEATURES
+============================================= */
 .segundoMenuInfo {
     grid-area: segundoMenuInfo;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    padding: 50px 350px;
+    padding: 80px 350px;
 }
 
 .info-2 {
@@ -134,42 +147,355 @@ hr {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
+
 .info-2 .imagen-info2 {
     width: 60px;
     margin-bottom: 20px;
 }
 
+.info-2 .imagen-info2 img {
+    width: 100%;
+    height: auto;
+}
+
 .info-2 h1 {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2d3033;
+    letter-spacing: 0.5px;
 }
 
 .info-2 p {
     font-size: 14px;
-    color: #555;
-    width: 300px;
+    color: #6c7279;
+    line-height: 1.7;
+    width: 240px;
 }
 
+/* =============================================
+   GALERÍA WORKS
+============================================= */
 .galeriaFotos {
     grid-area: galeriaFotos;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 50px 0
 }
-.galeriaFotos .foto1 img{
+
+.galeriaFotos .foto1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.galeriaFotos .foto1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 69, 70, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.galeriaFotos .foto1:hover .overlay-foto {
+    opacity: 1;
+}
+
+.overlay-foto h5 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.overlay-foto p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* =============================================
+   EQUIPO
+============================================= */
+.peronsalEmpresa {
+    grid-area: peronsalEmpresa;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 80px 310px;
+}
+
+.peronsalEmpresa .perfil-persona {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    padding: 0 20px;
+}
+
+.peronsalEmpresa .perfil-persona .imagen-persona {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-persona img {
+    width: 270px;
+    height: auto;
+}
+
+.peronsalEmpresa .perfil-persona .texto-persona {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    padding: 20px 0 0 0;
+}
+
+.peronsalEmpresa .perfil-persona h1 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 20px 0 0 0;
+    color: #2d3033;
+}
+
+.peronsalEmpresa .perfil-persona h2 {
+    font-size: 12px;
+    font-weight: 700;
+    width: 270px;
+}
+
+.formacion {
+    color: #E84546;
+    letter-spacing: 0.5px;
+}
+
+.peronsalEmpresa .perfil-persona p {
+    font-size: 14px;
+    color: #6c7279;
+    width: 270px;
+    padding: 15px 0 0 0;
+    line-height: 1.7;
+}
+
+.botones-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 15px 0 0 0;
+}
+
+.botones-redes button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-redes button img {
+    width: 22px;
+    height: auto;
+    opacity: 0.6;
+}
+
+.botones-redes button:hover img {
+    opacity: 1;
+}
+
+/* =============================================
+   TESTIMONIALS
+============================================= */
+.fraseMotivadora {
+    grid-area: fraseMotivadora;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #523549;
+    min-height: 400px;
+}
+
+.testimonio-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testimonio-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.peronsalEmpresa {
-    grid-area: peronsalEmpresa;
+    display: block;
 }
 
+.testimonio-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+}
 
+.testimonio-texto blockquote {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
 
+.testimonio-texto blockquote p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 24px;
+}
 
-.fraseMotivadora {
-    grid-area: fraseMotivadora;
+.testimonio-texto blockquote cite {
+    font-size: 13px;
+    font-weight: 700;
+    color: #E84546;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* =============================================
+   DOWNLOAD
+============================================= */
+.download-seccion {
+    grid-area: download-seccion;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.download-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+}
+
+.download-contenido h3 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #2d3033;
+    line-height: 1.3;
+}
+
+.download-contenido p {
+    font-size: 14px;
+    color: #6c7279;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #E84546;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-download:hover {
+    background-color: #c93535;
+    color: #fff;
+}
+
+/* =============================================
+   FOOTER
+============================================= */
+.footer {
+    grid-area: footer;
+    background-color: #3A3E63;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 350px;
+    gap: 40px;
+}
+
+.footer-col h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.social-links li a:hover {
+    background-color: #E84546;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px 350px;
+    text-align: center;
+    background-color: #313455;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
 }
