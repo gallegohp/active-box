@@ -499,3 +499,232 @@ hr {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.4);
 }
+
+@media screen and (max-width: 1279px) {
+    .bannerInicial {
+        padding: 40px 150px;
+    }
+    .segundoMenuInfo {
+        padding: 80px 150px;
+    }
+    .peronsalEmpresa {
+        padding: 80px 150px;
+    }
+    .footer-top {
+        padding: 60px 150px;
+    }
+    .footer-bottom {
+        padding: 25px 150px;
+    }
+    .texto-banner-inicial h1 {
+        font-size: 48px;
+        width: 100%;
+    }
+    .texto-banner-inicial p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .bannerInicial {
+        padding: 40px 60px;
+    }
+    .segundoMenuInfo {
+        padding: 60px 60px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeriaFotos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .peronsalEmpresa {
+        padding: 60px 60px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .peronsalEmpresa .perfil-persona .texto-persona,
+    .peronsalEmpresa .perfil-persona h2,
+    .peronsalEmpresa .perfil-persona p {
+        width: 100%;
+    }
+    .imagen-persona img {
+        width: 100%;
+    }
+    .footer-top {
+        padding: 60px 60px;
+    }
+    .footer-bottom {
+        padding: 25px 60px;
+    }
+    .texto-banner-inicial h1 {
+        font-size: 40px;
+    }
+    .fraseMotivadora {
+        grid-template-columns: 1fr;
+    }
+    .testimonio-imagen {
+        max-height: 300px;
+    }
+    .testimonio-texto {
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bannerInicial {
+        padding: 30px;
+    }
+    .menu-inicio {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "menu";
+        gap: 20px;
+    }
+    .menu-inicio .logo {
+        justify-content: center;
+    }
+    .menu-inicio .menu {
+        justify-content: center;
+    }
+    .menu-inicio .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .menu-inicio .menu ul li {
+        margin-left: 0;
+    }
+    .texto-banner-inicial h1 {
+        font-size: 32px;
+        width: 100%;
+        padding-top: 40px;
+    }
+    .texto-banner-inicial p {
+        width: 100%;
+        font-size: 16px;
+    }
+    .segundoMenuInfo {
+        padding: 40px 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeriaFotos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .peronsalEmpresa {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 30px;
+        gap: 30px;
+    }
+    .fraseMotivadora {
+        grid-template-columns: 1fr;
+    }
+    .testimonio-imagen {
+        max-height: 250px;
+    }
+    .testimonio-texto {
+        padding: 40px 30px;
+    }
+    .testimonio-texto blockquote p {
+        font-size: 16px;
+    }
+    .download-seccion {
+        padding: 60px 30px;
+    }
+    .footer-top {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+    .footer-bottom {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .bannerInicial {
+        padding: 20px;
+    }
+    .menu-inicio .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .texto-banner-inicial h1 {
+        font-size: 26px;
+        padding-top: 20px;
+    }
+    .texto-banner-inicial p {
+        font-size: 14px;
+    }
+    .texto-banner-inicial button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .segundoMenuInfo {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .galeriaFotos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .peronsalEmpresa {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .peronsalEmpresa .perfil-persona {
+        align-items: center;
+        text-align: center;
+    }
+    .peronsalEmpresa .perfil-persona .texto-persona,
+    .peronsalEmpresa .perfil-persona h2,
+    .peronsalEmpresa .perfil-persona p {
+        width: 100%;
+    }
+    .botones-redes {
+        justify-content: center;
+    }
+    .imagen-persona img {
+        width: 100%;
+        max-width: 280px;
+    }
+    .fraseMotivadora {
+        grid-template-columns: 1fr;
+    }
+    .testimonio-imagen {
+        max-height: 200px;
+    }
+    .testimonio-texto {
+        padding: 30px 20px;
+    }
+    .testimonio-texto blockquote p {
+        font-size: 15px;
+    }
+    .download-seccion {
+        padding: 50px 20px;
+    }
+    .download-contenido h3 {
+        font-size: 22px;
+    }
+    .btn-download {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-top {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    .footer-bottom {
+        padding: 20px;
+    }
+    .footer-col {
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
